@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Bootstrap</title>
+<link rel="icon" href="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlcAAAAJGMwMTViMDc2LTMxNWQtNGZhZi1hNTI4LTRjZTcwNTIzYjdiYw.jpg" type="image/gif" size="18x180 />"
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<style>
+#slider{
+border: 1px solid white;
+width: 75%;
+overflow:hidden;
+}
+#slider .slides{
+display: block;
+width: 6000px;
+margin: 0;
+padding:0;
+}
+#slider .slide{
+float:left;
+list-style-type:none;
+width: 720px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid page-responsive">
+<div class="page-header">
+<div class="col-lg-10 clo-md-10 col-sm-11 col-xs-11">
+<img src="http://assets.dice.com/external/images/empLogos/3e797a53428f8834c8b19caa7a7ff225.jpg" class="img-rounded img-responsive" alt="Saibersys" width="460" height="345/2" />
+</div>
+<div class="col-lg-2 clo-md-2 col-sm-1 col-xs-1">
+<button class="btn btn-primary" role="button">Sign in</button>
+</div>
+</div>
+<div class="col-lg-8 clo-md-8 col-sm-12 col-xs-12" id="slider">
+<ul class="slides">
+<li class="slide"><img class="img-responsive" src="http://koowallpapers.com/wp-content/uploads/2013/08/desktop-wallpaper-nature-hd-600x375.jpg" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="http://koowallpapers.com/wp-content/uploads/2013/08/Nature-Wallpapers-4-724x543.jpg" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="http://koowallpapers.com/wp-content/uploads/2013/06/fall-nature-wallpaper1-1024x819.jpg" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELgl1d1mB5aaHiqPy9jqxlZb0JR1A5r1G7cZxVF1jnfifqHcS0g" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="http://eskipaper.com/images/amazing-wheat-wallpaper-1.jpg" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSvmd2aDo2wx1xrY_hZCvUVkcymm7AsB6g9xsypob1cRUMXMVnzkw" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/d5/b5/4d/d5b54d879bf66c9829155ba6cd16cdcb.jpg" style="width:100vh; height: 100vh;" /></li>
+<li class="slide"><img class="img-responsive" src="http://unwallpapers.com/wp-content/uploads/2014/08/2014-New-Amazing-Animals-Hd-Wallpapers-Download.jpg" style="width:100%; height: 100vh;" /></li>
+</ul>
+</div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+$(function(){
+
+//configuration
+var width = 720;
+var animationSpeed = 1000;
+var pause = 3000;
+var currentSlide = 1;
+
+//cache DOM
+var $slider = $('#slider');
+var $slideContainer = $slider.find('.slides');
+var $slides = $slideContainer.find('.slide');
+var interval;
+function startSlider(){
+interval = setInterval(function(){
+$slideContainer.animate({'margin-left':'-='+width}, animationSpeed,function(){
+currentSlide++;
+if(currentSlide === $slides.length){
+currentSlide = 1;
+$slideContainer.css('margin-left',0);
+}
+});
+},pause);
+}
+function stopSlider(){
+clearInterval(interval);
+}
+$slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+startSlider();
+});
+</script>
+</body>
+</html>

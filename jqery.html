@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+<head>
+<title>jQuery</title>
+<link rel="icon" href="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlcAAAAJGMwMTViMDc2LTMxNWQtNGZhZi1hNTI4LTRjZTcwNTIzYjdiYw.jpg" type="image/gif" size="18x18" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body>
+<div class="container page-responsive">
+<div class="jumbotron">
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlcAAAAJGMwMTViMDc2LTMxNWQtNGZhZi1hNTI4LTRjZTcwNTIzYjdiYw.jpg" id="hid" class="img-circle col-md-2" />
+<h1 class = "success">Don Subbu</h1>
+<p>Hello there, how are you?</p>
+<button class="btn btn-primary">Click Me</button>
+</div>
+<input type="email" id="d" required />
+<div id="d1"></div>
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-3.1.0.js"></script>
+<script>window.jQuery || document.write('<script src="jquery-3.1.0.min.js"><\/script>');</script>
+<script>
+$(function(){
+$('button').click(function(){
+$('#hid').fadeToggle(1000);
+$('h1').css('color', 'red');
+$('p').css('border','solid 1px red');
+});
+$("input").blur(function(){
+if( $(this).val() ==""){
+$(this).css("border","1px solid red");
+$("#d1").text("please fill the field").css("color","red");
+}
+});
+});
+</script>
+</body>
+</html>

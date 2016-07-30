@@ -1,0 +1,110 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootheader</title>
+	<link rel="icon" href="" type="image/gif" size="18x18" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style>
+body{
+font-size: 62.5%;
+font-family: arial, sans-serif;
+}
+#myLogo{
+height: 100px;
+width:100px;
+}
+#pageTitle{
+font-size: 10em;
+vertical-align: middle;
+font-family: 'Pacifico', cursive;
+padding-left: 15px;
+color: #191970;
+}
+#slogan{
+font-size: 5.4em;
+}
+/*Carousel*/
+.slide1{
+background-image: url('https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/8493_511745315558306_1496951028_n.jpg?oh=507a60f3516fe48cfb6a519cba5a0be8&oe=5819BF46');
+height: 500px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+.slide2{
+background-image: url('https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/11008828_832623050137196_5437503299358749114_n.jpg?oh=22168dae2c69385c6e3883bdf89caf72&oe=581F22E0');
+height: 500px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+.slide3{
+background-image: url('https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/11107164_872941872771980_2535858629753474911_n.jpg?oh=71b765aa86b155468e96743d0127acb9&oe=58230E74');
+height: 500px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+.carousel-caption h1{
+font-size: 5.4em;
+font-family:'Pacifico', cursive;
+padding-bottom: 0.4em;
+}
+.carousel-caption p1{
+font-size: 2em;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+	<img class="img img-circle" src="https://scontent-dfw1-1.xx.fbcdn.net/v/t1.0-9/934035_976383512427815_8451916097052520038_n.jpg?oh=72d8234b4af6a178abb328d238c498a4&oe=58266AFC" id="myLogo" alt="subbu" />
+	<span id="pageTitle">Donism</span>
+	<p id="slogan">Loyalty & Respect</p>
+	</div>
+	<div id="theCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+	<li data-target="#theCarousel" data-slide-to="1"></li>
+	<li data-target="#theCarousel" data-slide-to="2"></li>
+	</ol>
+	</div>
+	<div class="carousel-inner">
+	<div class="item active">
+	<div class="slide1"></div>
+	<div class="carousel-caption">
+	<h1>Subbu Chaudhary</h1>
+	<p>Graduated student</p>
+	<p><a href="#" class="btn btn-primary">Hire</a></p>
+	</div>
+	</div>
+	<div class="item">
+	<div class="slide2"></div>
+	<div class="carousel-caption">
+	<h1>Subbu Chaudhary</h1>
+	<p>Graduated student</p>
+	</div>
+	</div>
+	<div class="item">
+	<div class="slide3"></div>
+	<div class="carousel-caption">
+	<h1>Subbu Chaudhary</h1>
+	<p>Graduated student</p>
+	</div>
+	</div>
+	</div>
+	<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#theCarousel" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
